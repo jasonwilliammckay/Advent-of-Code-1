@@ -5,7 +5,7 @@ using System.IO;
 
 namespace AdventOfCode_1
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -19,13 +19,14 @@ namespace AdventOfCode_1
             Console.ReadKey();
         }
 
-        static int determineFloor(String fileName)
+        public static int determineFloor(String fileName)
             // walks through each item in an input file to determine if santa should walk up or down a floor
             // eventually returns the sum of all the ups and downs, a negative value reflecting a basement sublevel
         {
             FileStream file = null;
             int direction = 0;
             int floor = 0;
+            BasementTracker.reset();
 
             try
             {

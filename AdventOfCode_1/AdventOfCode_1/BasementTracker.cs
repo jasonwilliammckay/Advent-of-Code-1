@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode_1
 {
-    static class BasementTracker
+    public static class BasementTracker
     {
         static private bool basementFound = false;
 
@@ -17,5 +17,12 @@
 
         static public void incBasementPosition()
             { basementPosition++; }
+
+        static public void reset()
+        {
+            basementFound = false;
+            basementPosition = 0;
+        }
+
     }
 }
